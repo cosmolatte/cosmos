@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int GCD(int a, int b) {
+	int m = a > b ? a : b;
+	int n = a > b ? b : a;
+	int r = m % n;
+	
+	while (r != 0) {
+		m = n;
+		n = r;
+		r = m % n;
+	}
+	return n;
+}
+
+int main() {
+	
+	int num1, num2;
+	cout << "100보다 작은 두 수를 입력하시오";
+	cin >> num1 >> num2;
+	cout << num1 << "와/과" << num2 << "의 최대공약수는" << GCD << "이다";
+
+	return 0;
+
+}
+//x표시는 문제를 해결하지 못하고 답지를 봤다는 표시
